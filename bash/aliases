@@ -1,0 +1,61 @@
+# Keep private aliases unversioned
+if [ -f ./aliases-private ]; then
+  source ./aliases-private
+fi
+
+# Mac ports Apache
+alias apache2='sudo /opt/local/apache2/bin/apachectl'
+alias apacherestart='apache2 restart'
+alias apachestart='apache2 start'
+alias apachestop='apache2 stop'
+
+# Common used commands
+alias ..="cd .." # Previous dir
+alias ...="cd ~" # Home dir
+alias benchmark='siege -c 5 -b -t30 ' # Benchmark an http server using siege
+alias c="clear" # Clear prompt
+alias cl="clear;ls -laGh" # Clear prompt and list files
+alias contrab-edit='env EDITOR=nano crontab -e' # Edit crontab using nano
+alias cx="chmod +x" # Make file executable
+alias flushdns="dscacheutil -flushcache" # Flushes the DNS cache
+alias h='history | grep ' # Greps the history. User ctrl+r for igrep
+alias hgserve='open http://localhost:8000/;hg serve' # Serve this mercurial repo and open the browser
+alias hot-node='supervisor -w ./ -p ' # node command replacement to reload the server on file changes
+alias l="ls -laGh" 
+alias mysqlstart='sudo /opt/local/share/mysql5/mysql/mysql.server start' # Mac ports mysql start
+alias mysqlstop='sudo /opt/local/share/mysql5/mysql/mysql.server stop' # Mac ports mysql stop
+alias rscp="rsync --partial --progress --rsh=ssh --archive" # rsync forced via ssh
+alias rsync-slow="rsync -av --progress --bwlimit=500 " # slow rsyncing
+alias s='clear; ack ' # clear prompt and search using ack
+alias sfbuild='./symfony doctrine:build -t --all --and-load --no-confirmation ' # Rebuild sf project
+alias svnpatch="patch -p0 -i" # Patch subversion repo
+alias tm='top -o vsize' # top sorted by memory
+alias tu='top -o cpu' # top sorted by cpu
+alias wd="cd ~/work/;clear;ls;" # switch to my working directory
+alias wgets='wget --referer="http://www.google.com" --user-agent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" --header="Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5" --header="Accept-Language: en-us,en;q=0.5" --header="Accept-Encoding: gzip,deflate" --header="Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7" --header="Keep-Alive: 300"' # Wget as a regular browser
+alias yuicompressor="java -jar ~/Applications/yuicompressor-2.4.2.jar " # Compress using the yui compressor
+
+
+# CVS shortcuts
+alias cvs-add-this="find . -type d -print | grep -v CVS | xargs -n1 cvs add;find . -type f -print | grep -v CVS | xargs -n1 cvs add" # Adds all files and directories to a CVS repo
+alias cvs-head="cvs up -A" # Change to this repo head
+alias cvs-status="cvs up 2>&1 | grep --color 'U \|P \|A \|R \|M \|C \|? '" # Show a human friendly cvs status
+alias cvs-update="cvs update -dPR" # Update from remote
+
+# Git shortcuts
+alias g="git status"
+alias gb="git branch"
+alias gba="git branch -a"
+alias gc="git commit -v"
+alias gca="git commit -v -a"
+alias gco="git checkout"
+alias gd="git diff"
+alias gdm="git diff master"
+alias ghp="git push -u origin master"
+alias git-merge='git mergetool -t diffmerge'
+alias gitserve='git daemon --reuseaddr --base-path=. --export-all --verbose'
+
+# KronoX (Time tracking tool)
+alias timesheets="kronox-report | mate" # see .dotfile/bin/kronox-report for details
+
+
