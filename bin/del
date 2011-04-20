@@ -30,7 +30,8 @@ for file in "$@"; do
     i=`expr $i + 1`
   done
   
-  if [ -f "$file" ]; then
+  if [ -e "$file" ]; then
     mv "$file" "$HOME/.Trash/${destfile}${suffix}"
+    touch "$HOME/.Trash/${destfile}${suffix}"
   fi
 done
