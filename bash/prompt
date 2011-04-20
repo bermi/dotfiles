@@ -1,0 +1,7 @@
+# Promt config
+source ~/.dotfiles/bash/colors
+
+export PS1="${CYAN}\u$@\h${WHITE}:${BRIGHT_CYAN}\w ${BRIGHT_YELLOW}\$(showBranch)\n${BRIGHT_VIOLET}→ ${NORMAL}${RESET}"
+
+# Sets title of window to be user@host
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
