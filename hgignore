@@ -1,0 +1,10 @@
+syntax: glob
+
+.DS_Store
+.git
+.git*
+.svn
+CVS
+CVSROOT/*
+log/*
+tmp/*
