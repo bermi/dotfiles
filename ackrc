@@ -2,7 +2,7 @@
 --sort-files
 
 # Pipe the output through a pager by default
-# --pager=less
+# export ACK_PAGER_COLOR="less -R"
 
 # Highlight the matching text
 --color

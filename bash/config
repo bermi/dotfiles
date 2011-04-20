@@ -25,7 +25,7 @@ export CVSEDITOR=EDITOR
 export ANT_OPTS='-Xms768m -Xmx1024m -XX:MaxPermSize=512m'
 export JAVA_OPTS='-Xms768m -Xmx1024m -XX:MaxPermSize=512m'
 export LSCOLORS=dxfxcxdxbxegedabagacad # use yellow for directories
-
+export ACK_PAGER_COLOR="less -R"
 
 # Bash completion
 if [ -f /opt/local/etc/bash_completion ]; then
