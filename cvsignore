@@ -1,0 +1,11 @@
+*.actionScriptProperties
+*.flexProperties
+*.project
+.actionScriptProperties
+.ditz-config
+.DS_Store
+.flexProperties
+.git*
+.hg*
+.project
+bugs*
