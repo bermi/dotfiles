@@ -1,0 +1,59 @@
+
+# Shows branch/tag name on different SCM
+showBranch () {
+  if [`pwd | grep -i "work|sites|projects|code|src"` != ""]; then
+    # Show git branch
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/±\1/' | tr "\n" ":"
+    # Show hg branch
+    hg branch 2> /dev/null | sed -e 's/\(.*\)/☿\1:/'
+    # Show CVS branch
+    if [ -d CVS ]; then if [ -e CVS/Tag ]; then cat CVS/Tag 2> /dev/null | sed -e 's/\(.*\)/☹\1:/'; else echo '☹MAIN:' 2> /dev/null ; fi; else echo ''  2> /dev/null ;fi
+  fi
+}
+
+# Manpage in Preview.app
+pman () {
+  man -t $* | ps2pdf - - | open -g -f -a /Applications/Preview.app
+}
+
+# Manpage in TextMate
+tman () {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+}
+
+# Quit an OS X application from the command line
+quit () {
+    for app in $*; do
+        osascript -e 'quit app "'$app'"'
+    done
+}
+
+# Git Commit pending changes and quote all args as message
+function gg () {
+  git commit -v -a -m "$*"
+}
+
+# Translates a word. By default from english to spanish
+translate () {
+  wget -qO- "http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=$1&langpair=${2:-en}|${3:-es}" | sed -E -n 's/[[:alnum:]": {}]+"translatedText":"([^"]+)".*/\1/p';
+  echo ''
+  return 0;
+}
+
+# Creates a directory and moves into it
+function take () {
+  mkdir $1;
+  cd $1;
+}
+
+
+# Use 'o' instead of 'open' (o ~/Sites will open the sites folder)
+# If no arguments are supplied open the current folder
+function o {
+  if [ "$1" != "" ]; then
+    open "$*"
+  else
+    open .
+  fi
+}
+
