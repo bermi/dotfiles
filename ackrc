@@ -17,6 +17,12 @@
 # print a break between results from different files
 --group
 
+# Adding Demandware ISML files
+--type-add=html=.isml
+
+# Adding Demandware script files
+--type-add=js=.ds
+
 # Introduce new types to ack
 --type-set=markdown=.markdown,.md,.mdown
 --type-set=haml=.haml
