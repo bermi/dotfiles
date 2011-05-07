@@ -62,4 +62,7 @@ alias gitserve='git daemon --reuseaddr --base-path=. --export-all --verbose'
 # KronoX (Time tracking tool)
 alias timesheets="kronox-report | mate" # see .dotfile/bin/kronox-report for details
 
+# Diary shortcuts. (File containing a log of my workday)
+alias d="mate ~/work/log/diary.md"
+alias dgc="cd ~/work/log/;gg Updating diary" # Commit the diary log
 
