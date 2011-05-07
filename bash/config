@@ -18,10 +18,10 @@ export LC_CTYPE
 export LANG
 export PATH=~/.bin:/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
-export EDITOR='mate_wait'
-export GIT_EDITOR=EDITOR
+export EDITOR='mate -w'
+export GIT_EDITOR='mate -w'
 export CVSROOT=~/.cvs/repository
-export CVSEDITOR=EDITOR
+export CVSEDITOR='mate -w'
 export ANT_OPTS='-Xms768m -Xmx1024m -XX:MaxPermSize=512m'
 export JAVA_OPTS='-Xms768m -Xmx1024m -XX:MaxPermSize=512m'
 export LSCOLORS=dxfxcxdxbxegedabagacad # use yellow for directories
