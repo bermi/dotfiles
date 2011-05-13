@@ -42,7 +42,7 @@ translate () {
 
 # Creates a directory and moves into it
 function take () {
-  mkdir $1;
+  mkdir -p $1;
   cd $1;
 }
 
