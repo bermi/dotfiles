@@ -66,3 +66,5 @@ alias timesheets="kronox-report | mate" # see .dotfile/bin/kronox-report for det
 alias d="mate ~/work/log/diary.md"
 alias dgc="cd ~/work/log/;gg Updating diary" # Commit the diary log
 
+# Opens Google Chrome in debug mode. Open a tab on localhost:9222 to start debugging
+alias chromedebug="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome  --remote-debugging-port=9222 --user-data-dir=remote-profile"
