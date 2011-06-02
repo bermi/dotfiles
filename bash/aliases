@@ -15,6 +15,7 @@ alias ...="cd ~" # Home dir
 alias benchmark='siege -c 5 -b -t30 ' # Benchmark an http server using siege
 alias c="clear" # Clear prompt
 alias cl="clear;ls -laGh" # Clear prompt and list files
+alias closurecompiler="java -jar ~/Applications/closure-compiler.jar" # Compress using Google Closure compiler
 alias contrab-edit='env EDITOR=nano crontab -e' # Edit crontab using nano
 alias cx="chmod +x" # Make file executable
 alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
