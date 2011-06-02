@@ -28,6 +28,7 @@ alias l="ls -laGh"
 alias m="mate"
 alias mysqlstart='sudo /opt/local/share/mysql5/mysql/mysql.server start' # Mac ports mysql start
 alias mysqlstop='sudo /opt/local/share/mysql5/mysql/mysql.server stop' # Mac ports mysql stop
+alias showheaders='curl -I -L'
 alias sp="source ~/.profile" # Source profile
 alias rscp="rsync --partial --progress --rsh=ssh --archive" # rsync forced via ssh
 alias rsync-slow="rsync -av --progress --bwlimit=500 " # slow rsyncing
