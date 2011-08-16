@@ -5,3 +5,4 @@ CVS
 CVSROOT
 log/*
 tmp/*
+mount-private
