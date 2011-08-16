@@ -36,7 +36,11 @@ if (($handle = fopen(realpath($kronox_export), "r")) !== FALSE) {
         list($start, $end, $minutes, $project, $task) = $data;
         $project = trim($project.' '.str_replace('(null)','', $task));
         $day = date('l', strtotime($start)-(3600*$time_zone_offset));
-        @$timesheet[$project][$day] += $minutes;
+        if(isset($timesheet[$project]) && isset($timesheet[$project][$day])) {
+          $timesheet[$project][$day] += $minutes;
+        }else{
+          $timesheet[$project][$day] = $minutes;
+        }
     }
     fclose($handle);
 }
