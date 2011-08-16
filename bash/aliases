@@ -16,6 +16,7 @@ alias benchmark='siege -c 5 -b -t30 ' # Benchmark an http server using siege
 alias c="clear" # Clear prompt
 alias cl="clear;ls -laGh" # Clear prompt and list files
 alias closurecompiler="java -jar ~/Applications/closure-compiler.jar" # Compress using Google Closure compiler
+alias coffee-debug="coffee --nodejs \"--debug-brk\" "
 alias contrab-edit='env EDITOR=nano crontab -e' # Edit crontab using nano
 alias cx="chmod +x" # Make file executable
 alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
@@ -24,23 +25,29 @@ alias flushdns="dscacheutil -flushcache" # Flushes the DNS cache
 alias h='history | grep ' # Greps the history. User ctrl+r for igrep
 alias hgserve='open http://localhost:8000/;hg serve' # Serve this mercurial repo and open the browser
 alias hot-node='supervisor -w ./ -p ' # node command replacement to reload the server on file changes
+alias httpheaders='sudo ngrep -d en1 -q -W byline "^(GET|POST|PUT|DELETE) .*"'
+alias jslint-all='find . -name "*.js" -print0 | xargs -0 jslint'
 alias l="ls -laGh" 
 alias m="mate"
+alias myip="curl ipv4.icanhazip.com"
 alias mysqlstart='sudo /opt/local/share/mysql5/mysql/mysql.server start' # Mac ports mysql start
 alias mysqlstop='sudo /opt/local/share/mysql5/mysql/mysql.server stop' # Mac ports mysql stop
 alias showheaders='curl -I -L'
 alias sp="source ~/.profile" # Source profile
+alias redis-start="redis-server /opt/local/etc/redis.conf"
 alias rscp="rsync --partial --progress --rsh=ssh --archive" # rsync forced via ssh
 alias rsync-slow="rsync -av --progress --bwlimit=500 " # slow rsyncing
 alias s='clear; ack ' # clear prompt and search using ack
 alias sfbuild='./symfony doctrine:build -t --all --and-load --no-confirmation ' # Rebuild sf project
 alias svnpatch="patch -p0 -i" # Patch subversion repo
+alias textmate-reload-bundles="osascript -e 'tell app \"TextMate\" to reload bundles'"
 alias tm='top -o vsize' # top sorted by memory
 alias tu='top -o cpu' # top sorted by cpu
 alias webdavcopy='curl -n --insecure -T'
 alias wd="cd ~/work/;clear;ls;" # switch to my working directory
 alias wgets='wget --referer="http://www.google.com" --user-agent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" --header="Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5" --header="Accept-Language: en-us,en;q=0.5" --header="Accept-Encoding: gzip,deflate" --header="Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7" --header="Keep-Alive: 300"' # Wget as a regular browser
 alias yuicompressor="java -jar ~/Applications/yuicompressor-2.4.2.jar " # Compress using the yui compressor
+alias acdsee="open -a Xee"
 
 # CVS shortcuts
 alias cvs-add-this="find . -type d -print | grep -v CVS | xargs -n1 cvs add;find . -type f -print | grep -v CVS | xargs -n1 cvs add" # Adds all files and directories to a CVS repo
@@ -60,6 +67,15 @@ alias gdm="git diff master"
 alias ghp="git push -u origin master"
 alias git-merge='git mergetool -t diffmerge'
 alias gitserve='git daemon --reuseaddr --base-path=. --export-all --verbose'
+alias gmb='git merge --no-ff' # mege branch with no fast forward
+
+# MacOS settings shortcuts
+alias macos-hide-dotfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+alias macos-show-dotfiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+
+# Generate projects using ngen
+alias generate-project='ngen -d ~/work/project-templates -t'
+
 
 # KronoX (Time tracking tool)
 alias timesheets="kronox-report | mate" # see .dotfile/bin/kronox-report for details
