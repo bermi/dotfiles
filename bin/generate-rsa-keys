@@ -1,7 +1,0 @@
-#!/bin/sh
-
-mkdir rsa_keys
-cd rsa_keys
-openssl genrsa  -out private-key.rsa 2048
-openssl rsa -in private-key.rsa -out public-key.rsa -pubout -outform PEM
-mate .

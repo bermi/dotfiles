@@ -1,12 +1,3 @@
-# Bermi Ferrer Dot Files
+# Bermi Ferrer dotfiles
 
-These are config files to set up a system the way I like it.
-
-
-## Installation
-
-    git clone git://github.com/bermi/dotfiles ~/.dotfiles
-    cd ~/.dotfiles
-    rake install
-
-
+This repo includes my setup as of 2023.

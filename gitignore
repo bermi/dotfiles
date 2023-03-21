@@ -1,8 +1,0 @@
-.DS_Store
-.hg
-.svn
-CVS
-CVSROOT
-log/*
-tmp/*
-mount-private
