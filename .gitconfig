@@ -1,0 +1,44 @@
+[init]
+  defaultBranch = main
+[user]
+  name = Bermi Ferrer
+  email = bermi@bermilabs.com
+[github]
+  user = bermi
+[color]
+  diff = auto
+  branch = auto
+  ui = auto
+[color "status"]
+  header = normal
+  added = magenta yellow
+  updated = green reverse
+  changed = red bold
+  untracked = blue white
+  nobranch = red white bold
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore
+	autocrlf = input
+	editor = neovim
+[diff]
+  renamelimit = 0
+	tool = opendiff
+[instaweb]
+  local = true
+  browser = chrome
+[rerere]
+  enabled = true
+[alias]
+  co = checkout
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -g -S
+  st = status
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  up = pull origin
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[log]
+	mailmap = true
